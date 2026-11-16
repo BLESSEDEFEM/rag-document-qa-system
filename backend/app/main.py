@@ -34,6 +34,7 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
+logging.getLogger("httpx").setLevel(logging.WARNING)
 
 # Initialize FastAPI with metadata (appears in docs)
 app = FastAPI(
